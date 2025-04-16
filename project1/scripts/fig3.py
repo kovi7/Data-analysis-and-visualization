@@ -1,0 +1,65 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
+import matplotlib.animation as animation
+
+"""b) pick one country and year at random and then find 4 other countries that are the closest by
+population size (either + or -) in given year and do similar plot (e.g., Chile at 1985 and 4 other countries)
+"""
+
+def value_format(value, pos):
+    if value >= 1e9:
+        return f'{value*1e-9:.1f}B'
+    elif value >= 1e6:
+        return f'{value*1e-6:.1f}M'
+    elif value >= 1e3:
+        return f'{value*1e-3:.1f}K'
+    else:
+        return f'{value:.0f}'
+
+#loading data
+data = pd.read_csv("../data/dataset1.csv")
+meta_con = pd.read_csv("../data/metadata1.csv")
+
+#preparing data
+codes_with_region = meta_con.loc[~pd.isna(meta_con['Region']), 'Country Code'].tolist()
+countries = data[data['Country Code'].isin(codes_with_region)].copy()
+
+random_country_name = 'Chile'
+random_year = '1985'
+random_country_population_year = countries[countries['Country Name'] == random_country_name][random_year].values[0]
+countries.loc[:,'pop_diff_year'] = abs(countries[random_year] - random_country_population_year)
+closest_countries = countries.sort_values(by='pop_diff_year').head(5)  # Including the selected country
+years = data.columns[2:]
+
+colors = plt.cm.tab20(np.linspace(0,1,5))
+country_colors = {country: colors[i] for i, country in enumerate(closest_countries['Country Name'])}
+
+#plot
+fig, ax = plt.subplots(figsize=(15,10))
+def animate(year):
+    ax.clear()
+    
+    # Title, labels, etc.
+    plt.title(label=f"Population by year for {random_country_name}\nand its closest countries by population in {random_year}", fontsize=31, pad=10)
+    plt.ylabel('Population size', fontsize=25, labelpad=10)
+    plt.xlabel('Country', fontsize=25, labelpad=10)
+    ax.yaxis.set_major_formatter(ticker.FuncFormatter(value_format))
+    max_population = 2000000+(closest_countries['2023'].max())
+    ax.set_ylim(0, max_population)
+    ax.text(x=0.09, y=0.8, s=year, fontsize=45, transform=ax.transAxes)
+    ax.tick_params(axis='both', labelsize=20)
+    
+    closest_sorted = closest_countries.sort_values(by=year, ascending=True)
+    bars = ax.bar(closest_sorted['Country Name'], closest_sorted[year], color=[country_colors[country] for country in closest_sorted['Country Name']])
+    
+    #country code
+    for i, bar in enumerate(bars):
+        country_code = closest_sorted['Country Code'].iloc[i]
+        ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 10, country_code, 
+                ha='center', va='bottom', fontsize=20, fontweight='bold')
+    
+
+ani = animation.FuncAnimation(fig, animate, frames=years, repeat=False)
+ani.save('../images/fig3.gif', writer='imagemagick')
