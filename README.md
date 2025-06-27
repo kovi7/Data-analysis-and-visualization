@@ -26,7 +26,7 @@ Using [World Bank population data](https://data.worldbank.org/indicator/SP.POP.T
 - **Animated bar/line/bubble plots** (color & B&W) for:
   - Top 5 most populated countries
   - Chile/Poland with 4 closest neighbors (by population)
-- **Contextual animations**: highlight events (genocity in Myanmar)
+- **Contextual animations**: highlight events (genocity in Cambodia)
 - **Gantt charts**: event timelines from PDF academic document, in color and grayscale
 - All visuals use `matplotlib.animation` and are saved as `.gif` and `.pdf`
 
