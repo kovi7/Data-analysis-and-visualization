@@ -1,0 +1,11 @@
+Architecture,Layers,Parameters,Accuracy,Activation,BatchNorm,Dropout
+Deep,5,51905,1.0,relu,True,0.3
+Very_Deep,6,191937,1.0,relu,True,0.4
+Wide,3,148481,1.0,relu,True,0.3
+ELU_Deep,5,51905,1.0,elu,True,0.3
+Shallow,3,4225,1.0,relu,True,0.2
+Medium,4,14657,1.0,relu,True,0.3
+GELU_Medium,4,14657,1.0,gelu,True,0.2
+No_BatchNorm,4,14209,1.0,relu,False,0.4
+High_Dropout,4,49793,1.0,relu,True,0.5
+Ultra_Deep,8,139265,1.0,relu,True,0.3

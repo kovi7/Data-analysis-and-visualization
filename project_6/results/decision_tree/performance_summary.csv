@@ -1,0 +1,4 @@
+Method,Best_Parameter,CV_Score,Validation_Score
+Depth Optimization,Depth: 1,0.9970099502487562,0.9970059880239521
+Feature Selection,Features: 1,0.9970059880239521,0.9970059880239521
+Grid Search,"Multiple: {'criterion': 'gini', 'max_depth': 3, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2}",0.9970099502487562,1.0

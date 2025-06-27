@@ -1,0 +1,31 @@
+{
+  "name": "Deep",
+  "accuracy": 1.0,
+  "config": {
+    "hidden_dims": [
+      256,
+      128,
+      64,
+      32
+    ],
+    "activation": "relu",
+    "use_batch_norm": true,
+    "dropout_rate": 0.3
+  },
+  "model_info": {
+    "total_params": 51905,
+    "trainable_params": 51905,
+    "layers": 5,
+    "config": {
+      "hidden_dims": [
+        256,
+        128,
+        64,
+        32
+      ],
+      "activation": "relu",
+      "use_batch_norm": true,
+      "dropout_rate": 0.3
+    }
+  }
+}

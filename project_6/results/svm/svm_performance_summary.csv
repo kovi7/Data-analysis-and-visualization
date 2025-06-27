@@ -1,0 +1,5 @@
+Method,Best_Parameter,CV_Score,Validation_Score
+C Optimization,C=10,1.0,N/A
+Gamma Optimization,Gamma=0.01,0.9990049751243781,N/A
+Kernel Comparison,rbf,1.0,N/A
+Grid Search,"C=10, γ=scale",1.0,1.0

@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time Series Forecast Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2, h3 { color: #333; text-align: center;}
+        .author {
+            text-align: center;
+            font-style: italic;
+        }
+        .plot { margin-bottom: 30px; }
+        img { max-width: 100%; height: auto; border: 1px solid #ccc; padding: 5px; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+        th { background-color: #f2f2f2; }
+        .table-section { margin: 30px 0; }
+    </style>
+</head>
+<body>
+    <p class="author">Justyna Kowalska</p>
+
+    <h1>Time Series Forecast Report</h1>
+
+    <h2>Country Temperature Plots and Forecasts</h2>
+    <div class="plots-container">
+
+    <div class="plot">
+        <img src="images/bra.png" alt="Bra">
+    </div>
+    
+    <div class="plot">
+        <img src="images/bra_ar.png" alt="Bra Ar">
+    </div>
+    
+    <div class="plot">
+        <img src="images/bra_arima.png" alt="Bra Arima">
+    </div>
+    
+    <div class="plot">
+        <img src="images/bra_hwes.png" alt="Bra Hwes">
+    </div>
+    
+    <div class="plot">
+        <img src="images/fra.png" alt="Fra">
+    </div>
+    
+    <div class="plot">
+        <img src="images/fra_ar.png" alt="Fra Ar">
+    </div>
+    
+    <div class="plot">
+        <img src="images/fra_arima.png" alt="Fra Arima">
+    </div>
+    
+    <div class="plot">
+        <img src="images/fra_hwes.png" alt="Fra Hwes">
+    </div>
+    
+    <div class="plot">
+        <img src="images/jap.png" alt="Jap">
+    </div>
+    
+    <div class="plot">
+        <img src="images/jap_ar.png" alt="Jap Ar">
+    </div>
+    
+    <div class="plot">
+        <img src="images/jap_arima.png" alt="Jap Arima">
+    </div>
+    
+    <div class="plot">
+        <img src="images/jap_hwes.png" alt="Jap Hwes">
+    </div>
+    
+    <div class="plot">
+        <img src="images/new.png" alt="New">
+    </div>
+    
+    <div class="plot">
+        <img src="images/new_ar.png" alt="New Ar">
+    </div>
+    
+    <div class="plot">
+        <img src="images/new_arima.png" alt="New Arima">
+    </div>
+    
+    <div class="plot">
+        <img src="images/new_hwes.png" alt="New Hwes">
+    </div>
+    
+    <div class="plot">
+        <img src="images/pol.png" alt="Pol">
+    </div>
+    
+    <div class="plot">
+        <img src="images/sou.png" alt="Sou">
+    </div>
+    
+    <div class="plot">
+        <img src="images/swe.png" alt="Swe">
+    </div>
+    
+    <div class="plot">
+        <img src="images/ukr.png" alt="Ukr">
+    </div>
+    
+    </div>
+
+    <div class="table-section">
+        <h2>Model Comparison Results (MAE)</h2>
+    <table>
+<thead>
+<tr><th>Country  </th><th style="text-align: right;">    AR</th><th style="text-align: right;">  ARIMA</th><th style="text-align: right;">  HWES</th></tr>
+</thead>
+<tbody>
+<tr><td>Brazil   </td><td style="text-align: right;">0.3673</td><td style="text-align: right;"> 0.3932</td><td style="text-align: right;">0.3621</td></tr>
+<tr><td>France   </td><td style="text-align: right;">0.5431</td><td style="text-align: right;"> 0.5875</td><td style="text-align: right;">0.5801</td></tr>
+</tbody>
+</table>
+    </div>
+    
+</body>
+</html>

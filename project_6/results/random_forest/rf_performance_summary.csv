@@ -1,0 +1,4 @@
+Method,Best_Parameter,CV_Score,Validation_Score
+N-Trees Optimization,Trees: 10,0.9970099502487562,1.0
+Grid Search,"Multiple: {'bootstrap': True, 'max_depth': 5, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100}",0.9970099502487562,1.0
+vs Decision Tree,Improvement: 0.002,0.9970099502487562,1.0

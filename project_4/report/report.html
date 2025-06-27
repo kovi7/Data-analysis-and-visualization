@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization Report</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        .author {
+            text-align: center;
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .plot-section { margin-bottom: 40px; }
+        .plot-grid { 
+            display: flex; 
+            flex-direction: column;
+            gap: 40px; 
+            align-items: center;
+        }
+        .plot-item { 
+            background: #fff; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 2px 12px #0002; 
+            width: 1500px;
+            max-width: 98vw;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .plot-item img {
+            width: 1200px;
+            max-width: 100%;
+            height: auto;
+            border: none;
+            background: #fafafa;
+            display: block;
+        }
+        .plot-item iframe {
+            width: 1500px;
+            height: 1200px;
+            max-width: 100%;
+            border: none;
+            background: #fafafa;
+            display: block;
+        }
+        .plot-caption { 
+            margin-top: 12px; 
+            font-size: 1.2em; 
+            color: #555; 
+            text-align: center;
+            width: 100%;
+            max-width: 1100px;
+            word-break: break-word;
+            white-space: normal;
+            line-height: 1.4;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Data Visualization Report</h1>
+    <p class="author">Justyna Kowalska</p>
+
+    <h2>Plot 1 (Plotly)</h2>
+        <div class="plot-grid">
+            <div class="plot-item">
+                <iframe src="../plots/plotly_plot1.html"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="plot-section">
+    <h2>Plot 1 (Bokeh)</h2>
+        <div class="plot-grid">
+            <div class="plot-item">
+                <iframe src="../plots/bokeh_plot1.html"></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <div class="plot-section">
+    <h2>Plot 1 (mpld3)</h2>
+        <div class="plot-grid">
+            <div class="plot-item">
+                <iframe src="../plots/mpld3_plot1.html"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="plot-section">
+
+    <h2>Plot 2 (Plotly)</h2>
+        <div class="plot-grid">
+            <div class="plot-item">
+                <iframe src="../plots/plotly_plot2.html"></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <div class="plot-section">
+    <h2>Plot 2 (Bokeh)</h2>
+        <div class="plot-grid">
+            <div class="plot-item">
+                <iframe src="../plots/bokeh_plot2.html"></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <div class="plot-section">
+    <h2>Plot 2 (mpld3)</h2>
+        <div class="plot-grid">
+            <div class="plot-item">
+                <iframe src="../plots/mpld3_plot2.html"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="plot-section">
+
+</div>
+
+</body>
+</html>

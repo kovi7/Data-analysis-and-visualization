@@ -1,0 +1,24 @@
+FEATURE SELECTION ANALYSIS
+==================================================
+
+TOP FEATURES BY CORRELATION:
+------------------------------
+ 1. pI                        0.982 (negative)
+ 2. charge_Solomon            0.498 (negative)
+ 3. charge_Rodwell            0.498 (negative)
+ 4. charge_EMBOSS             0.497 (negative)
+ 5. charge_DTASelect          0.496 (negative)
+ 6. charge_Sillero            0.496 (negative)
+ 7. aa_E                      0.410 (positive)
+ 8. aa_D                      0.399 (positive)
+ 9. length                    0.390 (positive)
+10. molecular_weight          0.390 (positive)
+
+RECOMMENDED FEATURES FOR PREDICTION:
+------------------------------
+ 1. pI                        0.982 (negative) [Other]
+ 2. charge_Solomon            0.498 (negative) [Charge]
+ 3. charge_Rodwell            0.498 (negative) [Charge]
+ 4. charge_EMBOSS             0.497 (negative) [Charge]
+ 5. charge_DTASelect          0.496 (negative) [Charge]
+ 6. aa_E                      0.410 (positive) [AA]

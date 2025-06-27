@@ -1,0 +1,5 @@
+Method,Best_Parameter,CV_Score,Validation_Score
+K Optimization,k=1,0.9930149253731344,1.0
+Distance Metrics,manhattan,0.9950149253731343,N/A
+Feature Selection,SelectKBest (12 features),1.0,N/A
+Grid Search,"Multiple: {'algorithm': 'auto', 'metric': 'manhattan', 'n_neighbors': 7, 'weights': 'distance'}",0.9940149253731343,0.9970059880239521
