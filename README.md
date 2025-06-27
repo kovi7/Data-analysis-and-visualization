@@ -44,8 +44,8 @@ Based on temperature records (1750–2023) for multiple cities and countries. So
 - **Grouped time series plots**: multi-subplots, color-coded per country and city
 
 Deliverables:
-- 15+ `.py` scripts for each plot (`task2a.py`, ..., `task5e.py`)
-- Final PDF report with plots only 
+- `.py` scripts for each plot (`task2a.py`, ..., `task5e.py`)
+- Final HTML report with plots only 
 - All plots exported as `.png`
 
 📁 `project_2/`
