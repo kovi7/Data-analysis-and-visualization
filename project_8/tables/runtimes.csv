@@ -1,0 +1,7 @@
+method,input_file,total_orfs,runtime_seconds
+biopython,chrM.fa,11,0.017791271209716797
+biopython,chr1.fa,89954,128.87168955802917
+emboss,chrM.fa,11,0.022921085357666016
+emboss,chr1.fa,89954,7.18977689743042
+pure python,chrM.fa,11,0.00940704345703125
+pure python,chr1.fa,74714,121.13438868522644
