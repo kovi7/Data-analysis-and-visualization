@@ -15,6 +15,10 @@ This repository contains a collection of Python-based projects focused on data a
 | 4       | Interactive Plots            | Web-ready, interactive visualizations (Plotly, Bokeh, mbek)              |
 | 5       | Time Series Forecasting      | Forecasting country temperatures up to the year 2263                    |
 | 6       | Isoelectric Point Classifier | Protein/peptide acidity classification via ML and DL                    |
+| 7       | The Importance of (Big) Data | Structural & sequence analysis using PDB and UniProt data              |
+| 8       | Human Genome Analysis                | GC content & ORF analysis for full human genome using FASTA files      |
+| 9       | High-Throughput Protein Feature Prediction | Parallel prediction of disorder and secondary structure using IUPred & ProtBert |
+
 
 ---
 
@@ -120,7 +124,7 @@ Forecasting country-level temperatures for the next 250 years, based on cleaned 
 
 ---
 
-## 🧬 Project 6: Isoelectric Point Classifier
+## 🧪 Project 6: Isoelectric Point Classifier
 Model to classify proteins/peptides as **acidic** (pI < 5.0) or **non-acidic** using features extracted from sequences.
 
 Source:
@@ -206,5 +210,71 @@ Example output format:
 MWRVRIFFGKRQTCAFWLCVTGTCASTMPISERHRAMKGDSIDVVNGRRLPGYGLCIKNKPV
 ```
 📁 `project_6/`
+
+---
+
+
+## 🧠 Project 7: The Importance of (Big) Data
+
+Exploreation of structural and sequence data from [**PDB**](https://files.rcsb.org/pub/pdb/derived_data/pdb_seqres.txt.gz) and [**UniProt**](https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/reference_proteomes/)
+
+- **Animated bar & pie charts**: structure techniques over time (2005–2024)
+- **Organism/kingdom analysis**: average protein length, amino acid composition
+- **N-terminus study**: most frequent residues
+- **Other visuals**: bar plots, boxplots, histograms
+- Includes statistical summaries with bootstrapped errors
+
+📁 `project_7/`
+
+---
+## 🧬 Project 8: Human Genome Analysis
+
+#### Genome reference:
+- [T2T paper (2021)](https://www.biorxiv.org/content/10.1101/2021.05.26.445798v1)
+- [Science (2022)](https://www.science.org/doi/10.1126/science.abj6987)
+- [T2T Data](https://www.mimuw.edu.pl/~lukaskoz/teaching/adp/labs/lab_human_genome/)
+
+Analysis of the **complete human genome (T2T Consortium v2.0)**:
+
+- Data `chm13v2.0.fa.gz` (∼936MB)
+- Calculate per-chromosome:
+  - Total length
+  - Base composition (A/T/G/C/N) and GC content
+  - **prettytable summary** + `.csv`
+- Implemented **6-frame ORF prediction** in:
+  - Pure Python
+  - Biopython
+  - EMBOSS (via wrapper)
+- Compared runtimes and number of CDS predictions on chr1 and chrM
+- Basic matching against known proteins (UniProt + annotation FASTA)
+
+📁 `project_8/`
+
+---
+
+## ⚙️ Project 9: High-Throughput Protein Feature Prediction
+
+#### Data Sources:
+- E. coli: [UP000000625_83333.fasta.gz](https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/reference_proteomes/Bacteria/UP000000625/UP000000625_83333.fasta.gz)
+- H. sapiens: [UP000005640_9606.fasta.gz](https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/reference_proteomes/Eukaryota/UP000005640/UP000005640_9606.fasta.gz)
+- SwissProt: [uniprot_sprot.fasta.gz](https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.fasta.gz)
+
+Prediction of protein disorder and secondary structure for E. coli, human, and SwissProt datasets using HPC (CPU/GPU):
+
+- **IUPred**: disorder prediction in CPU environment (single & multi-job SLURM setup)
+- **ProtBert-BFD-SS3**: secondary structure prediction with PyTorch on GPU
+- **Efficiency tests**: compare runtimes on CPU vs GPU
+- **Pseudo-FASTA outputs**: compact format for visualization
+- **Post-processing scripts**:
+  - Identify highly helical proteins (SHS-score)
+  - Match predictions with DisProt experimental data (MCC metric)
+  - Extract top “induced fit” disorder candidates based on hybrid predictions
+
+Final results:
+- Structured reports with runtime benchmarks
+- Disorder/structure percentage tables
+- SwissProt: top 5000 helical & induced-fit proteins
+
+📁 `project_9/`
 
 ---
