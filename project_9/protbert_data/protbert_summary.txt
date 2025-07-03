@@ -1,0 +1,5 @@
+UP000000625_83333_flat_0k_protbert.fasta | Helix:  43.23% | Strand:  16.25% | Coil:  40.52% | Total residues: 304079
+UP000000625_83333_flat_protbert.fasta| Helix:  42.79% | Strand:  16.42% | Coil:  40.79% | Total residues: 1354312
+UP000005640_9606_flat_protbert.fasta| Helix:  26.89% | Strand:   9.38% | Coil:  63.74% | Total residues: 11445250
+uniprot_sprot_flat_protbert.fasta| Helix:  35.69% | Strand:  14.52% | Coil:  49.78% | Total residues: 207621817
+UP000005640_9606_flat_protbert.fasta| Helix:  26.89% | Strand:   9.38% | Coil:  63.74% | Total residues: 11445250

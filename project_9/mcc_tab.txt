@@ -1,0 +1,2 @@
+UP000005640_9606_flat_iupred_long.fasta| MCC: 0.2888879813550769
+UP000005640_9606_flat_iupred_short.fasta| MCC: 0.27125516217087553

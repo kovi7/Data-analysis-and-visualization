@@ -1,0 +1,8 @@
+UP000000625_83333_flat_0k_iupred_short.fasta: 6.3% disorder
+UP000000625_83333_flat_iupred_short.fasta: 6.3% disorder
+UP000005640_9606_flat_iupred_short.fasta: 22.3% disorder
+UP000005640_9606_flat_iupred_long.fasta: 25.5% disorder
+uniprot_sprot_flat_iupred_long.fasta: 11.8% disorder
+uniprot_sprot_flat_0k_iupred_long.fasta: 12.1% disorder
+uniprot_sprot_flat_1k_iupred_long.fasta: 11.3% disorder
+uniprot_sprot_flat_3k_iupred_long.fasta: 12.0% disorder

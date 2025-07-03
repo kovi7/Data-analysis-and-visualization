@@ -1,0 +1,6 @@
+UP000000625_83333_flat_0k.fasta gpu 45.25
+UP000000625_83333_flat_3k.fasta gpu 60.55
+UP000000625_83333_flat_2k.fasta gpu 61.79
+UP000000625_83333_flat_1k.fasta gpu 63.83
+UP000000625_83333_flat_4k.fasta gpu 18.73
+UP000000625_83333_flat_0k.fasta gpu 45.27
